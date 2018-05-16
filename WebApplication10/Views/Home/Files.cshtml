@@ -1,0 +1,20 @@
+﻿
+@{
+	ViewData["Title"] = "View";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model WebApplication10.Models.Home.FilesViewModel
+<p>List of Files</p>
+<ul>
+	@foreach (var item in Model.Files)
+	{
+		<li>
+			<a asp-action="FileContent"
+			   asp-route-filename="@item.Name">
+				@item.Name
+			</a>
+		</li>
+	}
+</ul>
+

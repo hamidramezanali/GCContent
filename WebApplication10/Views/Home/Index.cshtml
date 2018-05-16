@@ -1,0 +1,30 @@
+﻿@{
+	ViewData["Title"] = "Home Page";
+}
+<!-- Banner -->
+<div class="jumbotron banner">
+	<div class="container">
+		<hgroup>
+			<h1>
+				Bits Flow
+			</h1>
+			<h2>
+				Web Design &amp; Development
+			</h2>
+		</hgroup>
+	</div>
+</div>
+<form asp-controller="Home" asp-action="UploadFile" method="post"
+	  enctype="multipart/form-data">
+
+	<input type="file" name="file" />
+	<button type="submit">Upload File</button>
+</form>
+
+<br />
+@Html.ActionLink("High Charts", "HighCharts", "Home")
+
+
+
+
+

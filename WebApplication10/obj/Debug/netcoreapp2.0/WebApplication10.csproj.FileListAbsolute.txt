@@ -1,0 +1,11 @@
+c:\users\krister\source\repos\WebApplication10\WebApplication10\bin\Debug\netcoreapp2.0\WebApplication10.deps.json
+c:\users\krister\source\repos\WebApplication10\WebApplication10\bin\Debug\netcoreapp2.0\WebApplication10.runtimeconfig.json
+c:\users\krister\source\repos\WebApplication10\WebApplication10\bin\Debug\netcoreapp2.0\WebApplication10.runtimeconfig.dev.json
+c:\users\krister\source\repos\WebApplication10\WebApplication10\bin\Debug\netcoreapp2.0\WebApplication10.dll
+c:\users\krister\source\repos\WebApplication10\WebApplication10\bin\Debug\netcoreapp2.0\WebApplication10.pdb
+c:\users\krister\source\repos\WebApplication10\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.csprojResolveAssemblyReference.cache
+c:\users\krister\source\repos\WebApplication10\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.csproj.CoreCompileInputs.cache
+c:\users\krister\source\repos\WebApplication10\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.AssemblyInfoInputs.cache
+c:\users\krister\source\repos\WebApplication10\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.AssemblyInfo.cs
+c:\users\krister\source\repos\WebApplication10\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.dll
+c:\users\krister\source\repos\WebApplication10\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.pdb

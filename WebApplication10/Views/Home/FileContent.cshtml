@@ -1,0 +1,58 @@
+﻿<h1 class="glyphicon glyphicon-equalizer col-lg-offset-1" >Chart Preview</h1>
+
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/boost.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+	
+	<div id="container" style="height: 600px; max-width: 1000px; margin: 0 auto"></div>
+	
+		<script>
+
+			var data = @ViewBag.Message;
+			var n = data.length;
+
+
+		console.time('line');
+		Highcharts.chart('container', {
+
+			chart: {
+				zoomType: 'x'
+			},
+
+			title: {
+				text: 'Chart Consists of ' + n + ' points'
+			},
+
+			subtitle: {
+				text: 'Using the Boost module'
+			},
+
+			tooltip: {
+				valueDecimals: 2
+			},
+
+			xAxis: {
+				type: 'count'
+			},
+
+			series: [{
+				data: data,
+				lineWidth: 0.5,
+				name: 'Data points'
+			}]
+
+		});
+		console.timeEnd('line');
+		</script>
+	
+</body>
+</html>

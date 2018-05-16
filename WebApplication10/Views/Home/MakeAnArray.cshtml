@@ -1,0 +1,92 @@
+﻿@model WebApplication10.Models.Home.MakeAnArray
+
+@{
+	ViewData["Title"] = "MakeAnArray";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>MakeAnArray</h2>
+<h4>Here you can make an array of numbers in the range and for number of nodes you enter</h4>
+
+<hr />
+<div class="row">
+	<div class="col-md-4">
+		<form asp-action="MakeAnArray">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+			<div class="form-group">
+				<label class="center-block">Minimum range</label>
+				<input value="Minimum range" class="bg-success " asp-for="@Model.min" type="number" /><br />
+				<label class="center-block">Maximum range</label>
+				<input value="Maximum range" class="bg-success " asp-for="@Model.max" type="number" /><br />
+				<label class="center-block">Number Of nodes</label>
+				<input value="Number Of nodes" class="bg-success " asp-for="@Model.nodes" type="number" /><br />
+				<label class="center-block">Percise</label>
+				<input title="Percise" class="bg-success " asp-for="@Model.percise" type="number" /><br />
+				<input type="submit" value="Create Line Chart" class="btn btn-success" />
+			</div>
+		</form>
+	</div>
+</div>
+
+<div>
+	<a asp-action="Index">Back to List</a>
+</div>
+<h1 class="glyphicon glyphicon-equalizer col-lg-offset-1">Line Chart Preview</h1>
+
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="https://code.highcharts.com/highcharts.js"></script>
+	<script src="https://code.highcharts.com/modules/boost.js"></script>
+	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+</head>
+<body>
+
+	<div id="container" style="border:solid;  height: 600px; max-width: 1000px; margin: 0 auto"></div>
+
+	<script>
+
+			var data = @ViewBag.Message;
+			var n = data.length;
+
+
+		console.time('line');
+		Highcharts.chart('container', {
+
+			chart: {
+				zoomType: 'x'
+			},
+
+			title: {
+				text: 'Chart Consists of ' + n + ' points'
+			},
+
+			subtitle: {
+				text: 'Using the Boost module'
+			},
+
+			tooltip: {
+				valueDecimals: 2
+			},
+
+			xAxis: {
+				type: 'count'
+			},
+
+			series: [{
+				data: data,
+				lineWidth: 0.5,
+				name: 'Data points'
+			}]
+
+		});
+		console.timeEnd('line');
+	</script>
+
+</body>
+</html>
+
