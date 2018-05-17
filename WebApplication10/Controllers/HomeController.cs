@@ -49,16 +49,23 @@ namespace WebApplication10.Controllers
             if (file == null || file.Length == 0)
                 return Content("file not selected");
 
-            var path = Path.Combine(
-                        Directory.GetCurrentDirectory(), "wwwroot/Download",
-                       file.FileName);
 
-            using (var stream = new FileStream(path, FileMode.Create))
+
+
+            var FN=Path.GetFileName(file.FileName);
+            //  var path =   @"C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\wwwroot\Upload\Untitled document3.txt";
+            var path = Path.Combine(
+                        Directory.GetCurrentDirectory(), "wwwroot\\Upload",
+                       FN);
+
+
+            using (var stream = new FileStream(path
+                , FileMode.Create))
             {
                 await file.CopyToAsync(stream);
             }
 
-            return RedirectToAction("Files");
+            return RedirectToAction("Index");
         }
 
 

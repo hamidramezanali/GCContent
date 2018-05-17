@@ -26,7 +26,7 @@ namespace WebApplication10
         {
             services.AddSingleton<IFileProvider>(
                  new PhysicalFileProvider(
-                     Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Download")));
+                     Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/Upload")));
             services.AddMvc();
         }
 
