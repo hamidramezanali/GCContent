@@ -9,3 +9,14 @@ c:\users\krister\source\repos\WebApplication10\WebApplication10\obj\Debug\netcor
 c:\users\krister\source\repos\WebApplication10\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.AssemblyInfo.cs
 c:\users\krister\source\repos\WebApplication10\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.dll
 c:\users\krister\source\repos\WebApplication10\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.pdb
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\bin\Debug\netcoreapp2.0\WebApplication10.deps.json
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\bin\Debug\netcoreapp2.0\WebApplication10.runtimeconfig.json
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\bin\Debug\netcoreapp2.0\WebApplication10.runtimeconfig.dev.json
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\bin\Debug\netcoreapp2.0\WebApplication10.dll
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\bin\Debug\netcoreapp2.0\WebApplication10.pdb
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.csprojAssemblyReference.cache
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.csproj.CoreCompileInputs.cache
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.AssemblyInfoInputs.cache
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.AssemblyInfo.cs
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.dll
+C:\Users\GeneMapperS1\GIT\GCContent\WebApplication10\obj\Debug\netcoreapp2.0\WebApplication10.pdb

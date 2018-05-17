@@ -1,26 +1,29 @@
-﻿<h1 class="glyphicon glyphicon-equalizer col-lg-offset-1" >Chart Preview</h1>
+﻿<h1 class="glyphicon glyphicon-equalizer col-lg-offset-1">Chart Preview</h1>
 
 
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<script src="https://code.highcharts.com/highcharts.js"></script>
-	<script src="https://code.highcharts.com/modules/boost.js"></script>
-	<script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/boost.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
 </head>
 <body>
-	
-	<div id="container" style="height: 600px; max-width: 1000px; margin: 0 auto"></div>
-	
-		<script>
 
-			var data = @ViewBag.Message;
-			var n = data.length;
+    <div id="container" style="height: 600px; max-width: 1000px; margin: 0 auto"></div>
+    <div id="chart-A" class="chart">
+        <script>
 
+        var data = @ViewBag.Message;
+        var AvgGCContent=@ViewBag.AvgGCContent;
+        var n = data.length;
+        var count = @ViewBag.Count;
+        
 
+        console.log(count);
 		console.time('line');
 		Highcharts.chart('container', {
 
@@ -43,7 +46,23 @@
 			xAxis: {
 				type: 'count'
 			},
-
+            yAxis: {
+                title: {
+                    text: 'Observations'
+                },
+                plotLines: [{
+                    value: AvgGCContent,
+                    color: 'red',
+                    width: 1,
+                    label: {
+                        text: 'Average GC Content :' + AvgGCContent,
+                        align: 'center',
+                        style: {
+                            color: 'gray'
+                        }
+                    }
+                }]
+            },
 			series: [{
 				data: data,
 				lineWidth: 0.5,
@@ -51,8 +70,77 @@
 			}]
 
 		});
-		console.timeEnd('line');
-		</script>
-	
+            console.timeEnd('line');
+
+
+
+        </script>
+    </div>
+    <div class="spacer"></div>
+
+
+    <div id="container1" style="height: 600px; max-width: 1000px; margin: 0 auto"></div>
+    <div id="chart-A" class="chart">
+        <script>
+
+            var data2=@ViewBag.GCATN;
+            Highcharts.chart('container1', {
+                chart: {
+                    type: 'column'
+                },
+                title: {
+                    text: 'Amount of GCATN per sample'
+                },
+               
+                xAxis: {
+                    categories: ['G', 'C', 'A', 'T', 'N'],
+                    title: {
+                        text: null
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: 'Population (Thousands)',
+                        align: 'high'
+                    },
+                    labels: {
+                        overflow: 'justify'
+                    }
+                },
+                tooltip: {
+                    valueSuffix: ' thousands'
+                },
+                plotOptions: {
+                    bar: {
+                        dataLabels: {
+                            enabled: true
+                        }
+                    }
+                },
+                legend: {
+                    layout: 'horizontal',
+                    align: 'bottom',
+                    verticalAlign: 'top',
+                    x: -40,
+                    y: 80,
+                    floating: true,
+                    borderWidth: 1,
+                    backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+                    shadow: true
+                },
+                credits: {
+                    enabled: false
+                },
+                series: [{
+                    data: data2,
+
+                    name: 'Data points'
+                }]
+            });
+        </script>
+    </div>
+    <div class="spacer"></div>
+
 </body>
 </html>

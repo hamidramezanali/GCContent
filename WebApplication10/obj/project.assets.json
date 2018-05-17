@@ -13352,30 +13352,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Krister\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\GeneMapperS1\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
-    "restoreSettings": {
-      "hideWarningsAndErrors": true
-    },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Krister\\source\\repos\\WebApplication10\\WebApplication10\\WebApplication10.csproj",
+      "projectUniqueName": "C:\\Users\\GeneMapperS1\\GIT\\GCContent\\WebApplication10\\WebApplication10.csproj",
       "projectName": "WebApplication10",
-      "projectPath": "C:\\Users\\Krister\\source\\repos\\WebApplication10\\WebApplication10\\WebApplication10.csproj",
-      "packagesPath": "C:\\Users\\Krister\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Krister\\source\\repos\\WebApplication10\\WebApplication10\\obj\\",
+      "projectPath": "C:\\Users\\GeneMapperS1\\GIT\\GCContent\\WebApplication10\\WebApplication10.csproj",
+      "packagesPath": "C:\\Users\\GeneMapperS1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\GeneMapperS1\\GIT\\GCContent\\WebApplication10\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Krister\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\GeneMapperS1\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"

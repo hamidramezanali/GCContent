@@ -50,7 +50,7 @@ namespace WebApplication10.Controllers
                 return Content("file not selected");
 
             var path = Path.Combine(
-                        Directory.GetCurrentDirectory(), "wwwroot/Upload",
+                        Directory.GetCurrentDirectory(), "wwwroot/Download",
                        file.FileName);
 
             using (var stream = new FileStream(path, FileMode.Create))
@@ -163,7 +163,10 @@ namespace WebApplication10.Controllers
             }
 
             string Seq1= Models.Home.MakeAnArray.countGC(Sequences);
+            ViewBag.GCATN = Models.Home.MakeAnArray.GCATNcount;
             ViewBag.Message = Seq1;
+            ViewBag.Count = Models.Home.MakeAnArray.count;
+            ViewBag.AvgGCContent = Models.Home.MakeAnArray.AvgGCContent;
             return View(memory);
         }
 

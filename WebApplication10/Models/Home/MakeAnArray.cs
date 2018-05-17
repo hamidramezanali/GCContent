@@ -8,14 +8,18 @@ namespace WebApplication10.Models.Home
 {
     public class MakeAnArray
     {
+        public static double AvgGCContent { get; set; }
+        public static int  count { get; set; }
+        public static string GCATNcount { get; set; }
         public static string countGC(List<string> Sequences)
         {
             int[] GC = new int[100];
+            int[] GCATN = new int[5];
             int[] Total = new int[100];
             double[] MeanGC = new double[100];
             string fileResult;
 
-       
+             
 
             foreach (var Seq in Sequences)
             {
@@ -24,17 +28,50 @@ namespace WebApplication10.Models.Home
                     if ((Seq[i] == 'G') || (Seq[i] == 'C'))
                         GC[i] += 1;
                     Total[i] += 1;
+                    switch (Seq[i])
+                    {
+                        case 'G':
+                            GCATN[0] += 1;
+                            break;
+                        case 'C':
+                            GCATN[1] += 1;
+                            break;
+                        case 'A':
+                            GCATN[2] += 1;
+                            break;
+                        case 'T':
+                            GCATN[3] += 1;
+                            break;
+                        default:                        
+                            GCATN[4] += 1;
+                            break;
+                    }
 
                 }
             }
-            for (int i = 0; i < 100; i++)
-                if (Total[i] != 0) MeanGC[i] = Math.Round((double)GC[i] / Total[i],2);
-
-            fileResult = "[";
-            for (int i = 0; i < 100; i++)
+            GCATNcount = "[";
+            for (int i = 0; i < 5; i++)
             {
-                if (i < 100 - 1) fileResult += MeanGC[i] + ",";
-                else if (i == 100 - 1) fileResult += MeanGC[i] + "]";
+                if (i < 4) GCATNcount += GCATN[i] + ",";
+                else if (i == 4) GCATNcount += GCATN[i] + "]";
+            }
+
+
+            double total = 0;
+            count = 0;
+            for (int i = 0; i < 100; i++)
+                if (Total[i] != 0)
+                {
+                    MeanGC[i] = Math.Round((double)GC[i] / Total[i], 2);
+                    count++;
+                    total += MeanGC[i];
+                }
+            AvgGCContent = Math.Round(total / count,2);
+            fileResult = "[";
+            for (int i = 0; i < count; i++)
+            {
+                if (i < count - 1) fileResult += MeanGC[i] + ",";
+                else if (i == count - 1) fileResult += MeanGC[i] + "]";
             }
             return fileResult;
         }
