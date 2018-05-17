@@ -144,7 +144,7 @@ namespace WebApplication10.Controllers
 
             var path = Path.Combine(
                            Directory.GetCurrentDirectory(),
-                           "wwwroot/Download", filename);
+                           "wwwroot/Upload", filename);
 
             var memory = new MemoryStream();
             using (var stream = new FileStream(path, FileMode.Open))
