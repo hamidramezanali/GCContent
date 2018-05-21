@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "7b30b5d0477b43f830f294e1b33e32393b0d4621"
+    "signature": "9cfaf63588da80dcdac5a6ebbab97a001a86cebf"
   },
   "compilationOptions": {
     "defines": [
@@ -25,13 +25,21 @@
         "dependencies": {
           "Chart.Mvc": "1.0.0.2",
           "ChartJS": "18.1.1-pre-18064",
+          "CouchN": "0.2.0.7",
+          "DataTablesParser": "3.0.2",
+          "LoveSeat": "1.0.1",
           "Microsoft.AspNetCore.All": "2.0.5",
           "Microsoft.Chart.Controls": "4.7.2046",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.2",
+          "MyCouch": "6.0.0",
           "SiCo.Utilities.Web.Charts": "2.2.0",
           "System-Web-Helpers.dll": "1.0.0",
+          "datatables.net": "1.10.15",
+          "datatables.net.bootstrap": "1.10.15.1",
+          "datatables.net.core": "1.10.15.1",
           "dropzone": "4.2.0",
+          "jQuery": "3.3.1",
           "jQuery.filedrop": "1.0.1"
         },
         "runtime": {
@@ -39,6 +47,11 @@
         },
         "compile": {
           "WebApplication10.dll": {}
+        }
+      },
+      "bootstrap/3.3.7": {
+        "dependencies": {
+          "jQuery": "3.3.1"
         }
       },
       "Chart.Mvc/1.0.0.2": {
@@ -51,13 +64,57 @@
       },
       "ChartJS/18.1.1-pre-18064": {
         "dependencies": {
-          "jQuery": "3.1.0",
+          "jQuery": "3.3.1",
           "jquery-globalize": "1.1.1"
         }
       },
       "cldrjs/0.4.4": {},
+      "CouchN/0.2.0.7": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2",
+          "RestSharp": "105.1.0"
+        },
+        "runtime": {
+          "lib/net40/CouchN.dll": {}
+        },
+        "compile": {
+          "lib/net40/CouchN.dll": {}
+        }
+      },
+      "datatables.net/1.10.15": {
+        "dependencies": {
+          "jQuery": "3.3.1"
+        }
+      },
+      "datatables.net.bootstrap/1.10.15.1": {
+        "dependencies": {
+          "bootstrap": "3.3.7",
+          "datatables.net.core": "1.10.15.1"
+        }
+      },
+      "datatables.net.core/1.10.15.1": {
+        "dependencies": {
+          "jQuery": "3.3.1"
+        }
+      },
+      "DataTablesParser/3.0.2": {
+        "runtime": {
+          "lib/net45/DataTablesParser.dll": {}
+        },
+        "compile": {
+          "lib/net45/DataTablesParser.dll": {}
+        }
+      },
       "dropzone/4.2.0": {},
-      "jQuery/3.1.0": {},
+      "Ensure.That/8.0.0": {
+        "runtime": {
+          "lib/netstandard2.0/Ensure.That.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/Ensure.That.dll": {}
+        }
+      },
+      "jQuery/3.3.1": {},
       "jquery-globalize/1.1.1": {
         "dependencies": {
           "cldrjs": "0.4.4"
@@ -101,6 +158,19 @@
             "rid": "win-x86",
             "assetType": "native"
           }
+        }
+      },
+      "LoveSeat/1.0.1": {
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "runtime": {
+          "lib/net40/LoveSeat.Interfaces.dll": {},
+          "lib/net40/LoveSeat.dll": {}
+        },
+        "compile": {
+          "lib/net40/LoveSeat.Interfaces.dll": {},
+          "lib/net40/LoveSeat.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/2.4.0": {
@@ -450,7 +520,7 @@
       "Microsoft.AspNetCore.Authentication.OAuth/2.0.1": {
         "dependencies": {
           "Microsoft.AspNetCore.Authentication": "2.0.1",
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.Authentication.OAuth.dll": {}
@@ -823,7 +893,7 @@
       "Microsoft.AspNetCore.JsonPatch/2.0.0": {
         "dependencies": {
           "Microsoft.CSharp": "4.4.0",
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.JsonPatch.dll": {}
@@ -1081,7 +1151,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Hosting.Abstractions": "2.0.1",
           "Microsoft.Extensions.Logging.Console": "2.0.0",
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.AspNetCore.NodeServices.dll": {}
@@ -1386,7 +1456,7 @@
           "Microsoft.Rest.ClientRuntime": "2.3.8",
           "Microsoft.Rest.ClientRuntime.Azure": "3.3.7",
           "NETStandard.Library": "2.0.0",
-          "Newtonsoft.Json": "10.0.3",
+          "Newtonsoft.Json": "11.0.2",
           "System.Net.Http": "4.3.0"
         },
         "runtime": {
@@ -1400,7 +1470,7 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
           "NETStandard.Library": "2.0.0",
-          "Newtonsoft.Json": "10.0.3",
+          "Newtonsoft.Json": "11.0.2",
           "System.Collections": "4.3.0",
           "System.Collections.Concurrent": "4.3.0",
           "System.Linq": "4.3.0",
@@ -1880,7 +1950,7 @@
         "dependencies": {
           "Microsoft.Extensions.Configuration": "2.0.0",
           "Microsoft.Extensions.Configuration.FileExtensions": "2.0.0",
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Configuration.Json.dll": {}
@@ -1935,7 +2005,7 @@
       "Microsoft.Extensions.DependencyModel/2.0.3": {
         "dependencies": {
           "Microsoft.DotNet.PlatformAbstractions": "2.0.3",
-          "Newtonsoft.Json": "10.0.3",
+          "Newtonsoft.Json": "11.0.2",
           "System.Diagnostics.Debug": "4.3.0",
           "System.Dynamic.Runtime": "4.3.0",
           "System.Linq": "4.3.0"
@@ -2143,7 +2213,7 @@
       "Microsoft.Extensions.Logging.EventSource/2.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Logging": "2.0.0",
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.Extensions.Logging.EventSource.dll": {}
@@ -2237,7 +2307,7 @@
         "dependencies": {
           "NETStandard.Library": "2.0.0",
           "System.Runtime.Serialization.Json": "4.0.2",
-          "System.Runtime.Serialization.Primitives": "4.3.0"
+          "System.Runtime.Serialization.Primitives": "4.1.1"
         },
         "runtime": {
           "lib/netstandard1.3/Microsoft.IdentityModel.Clients.ActiveDirectory.Platform.dll": {},
@@ -2291,7 +2361,7 @@
       "Microsoft.IdentityModel.Tokens/5.1.4": {
         "dependencies": {
           "Microsoft.IdentityModel.Logging": "1.1.4",
-          "Newtonsoft.Json": "10.0.3",
+          "Newtonsoft.Json": "11.0.2",
           "System.Collections": "4.3.0",
           "System.Diagnostics.Tools": "4.3.0",
           "System.Runtime": "4.3.0",
@@ -2328,7 +2398,7 @@
       "Microsoft.Rest.ClientRuntime/2.3.8": {
         "dependencies": {
           "NETStandard.Library": "2.0.0",
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.dll": {}
@@ -2341,7 +2411,7 @@
         "dependencies": {
           "Microsoft.Rest.ClientRuntime": "2.3.8",
           "NETStandard.Library": "2.0.0",
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard1.4/Microsoft.Rest.ClientRuntime.Azure.dll": {}
@@ -2378,7 +2448,7 @@
       },
       "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/2.0.2": {
         "dependencies": {
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll": {}
@@ -2391,7 +2461,7 @@
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "2.0.2",
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard2.0/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {}
@@ -2439,7 +2509,7 @@
         "dependencies": {
           "Microsoft.CodeAnalysis.CSharp.Workspaces": "2.3.1",
           "Microsoft.VisualStudio.Web.CodeGeneration.Contracts": "2.0.2",
-          "Newtonsoft.Json": "10.0.3",
+          "Newtonsoft.Json": "11.0.2",
           "NuGet.Frameworks": "4.0.0"
         },
         "runtime": {
@@ -2487,26 +2557,31 @@
           "ref/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "Newtonsoft.Json/10.0.3": {
+      "MyCouch/6.0.0": {
         "dependencies": {
-          "Microsoft.CSharp": "4.4.0",
-          "NETStandard.Library": "2.0.0",
-          "System.ComponentModel.TypeConverter": "4.3.0",
-          "System.Runtime.Serialization.Formatters": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.3.0",
-          "System.Xml.XmlDocument": "4.3.0"
+          "Ensure.That": "8.0.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Reflection.Emit.Lightweight": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.3/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/MyCouch.dll": {}
         },
         "compile": {
-          "lib/netstandard1.3/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/MyCouch.dll": {}
+        }
+      },
+      "Newtonsoft.Json/11.0.2": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Newtonsoft.Json.Bson/1.0.1": {
         "dependencies": {
           "NETStandard.Library": "2.0.0",
-          "Newtonsoft.Json": "10.0.3"
+          "Newtonsoft.Json": "11.0.2"
         },
         "runtime": {
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
@@ -2545,6 +2620,14 @@
         },
         "compile": {
           "lib/netstandard1.0/Remotion.Linq.dll": {}
+        }
+      },
+      "RestSharp/105.1.0": {
+        "runtime": {
+          "lib/net452/RestSharp.dll": {}
+        },
+        "compile": {
+          "lib/net452/RestSharp.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -2712,7 +2795,7 @@
       "SiCo.Utilities.Web.Charts/2.2.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.0.2",
-          "Newtonsoft.Json": "10.0.3",
+          "Newtonsoft.Json": "11.0.2",
           "System.Reflection": "4.3.0",
           "System.Reflection.TypeExtensions": "4.4.0"
         },
@@ -2885,38 +2968,7 @@
           "System.Threading": "4.3.0"
         }
       },
-      "System.ComponentModel/4.3.0": {
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        }
-      },
       "System.ComponentModel.Annotations/4.4.0": {},
-      "System.ComponentModel.Primitives/4.3.0": {
-        "dependencies": {
-          "System.ComponentModel": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
-      "System.ComponentModel.TypeConverter/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Collections.NonGeneric": "4.3.0",
-          "System.Collections.Specialized": "4.3.0",
-          "System.ComponentModel": "4.3.0",
-          "System.ComponentModel.Primitives": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Extensions": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.4.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
-        }
-      },
       "System.Composition/1.0.31": {
         "dependencies": {
           "System.Composition.AttributedModel": "1.0.31",
@@ -3457,7 +3509,7 @@
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.1.1",
           "System.Text.Encoding": "4.3.0",
           "System.Text.Encoding.Extensions": "4.3.0",
           "System.Text.RegularExpressions": "4.3.0",
@@ -3594,15 +3646,6 @@
           "System.Runtime.Extensions": "4.3.0"
         }
       },
-      "System.Runtime.Serialization.Formatters/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.3.0"
-        }
-      },
       "System.Runtime.Serialization.Json/4.0.2": {
         "dependencies": {
           "System.IO": "4.3.0",
@@ -3610,7 +3653,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Runtime.Serialization.Primitives/4.3.0": {
+      "System.Runtime.Serialization.Primitives/4.1.1": {
         "dependencies": {
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0"
@@ -4084,7 +4127,7 @@
         "dependencies": {
           "Microsoft.Data.OData": "5.8.2",
           "NETStandard.Library": "2.0.0",
-          "Newtonsoft.Json": "10.0.3",
+          "Newtonsoft.Json": "11.0.2",
           "System.Spatial": "5.8.2"
         },
         "runtime": {
@@ -4278,6 +4321,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "bootstrap/3.3.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3YTWhPNh6UcnUvzw9u6A2/hy2w0h4lznxPbX6FY47lFia3+Ib4zBixTpW6YieYA/b2fLXbkjoD59OjcVF3cJXw==",
+      "path": "bootstrap/3.3.7",
+      "hashPath": "bootstrap.3.3.7.nupkg.sha512"
+    },
     "Chart.Mvc/1.0.0.2": {
       "type": "package",
       "serviceable": true,
@@ -4299,6 +4349,41 @@
       "path": "cldrjs/0.4.4",
       "hashPath": "cldrjs.0.4.4.nupkg.sha512"
     },
+    "CouchN/0.2.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6t6yFeYwLU/g9DvRJpqlP1L/+M51bvA24lx1pTKmuFmvzRxLMV7beuTIOIC5Ok0OlrHYp16EPi+odjQFvVFLJA==",
+      "path": "couchn/0.2.0.7",
+      "hashPath": "couchn.0.2.0.7.nupkg.sha512"
+    },
+    "datatables.net/1.10.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-q4EzBAJ9I10phyF24GXlRhXv2uJ91kG7nnVb80ywGsCghfus/1ynqMv12mFGjXxpoMdlOBCf4nth/EymQfCevw==",
+      "path": "datatables.net/1.10.15",
+      "hashPath": "datatables.net.1.10.15.nupkg.sha512"
+    },
+    "datatables.net.bootstrap/1.10.15.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-w1SVJyUzfThHVwdOk3+bhZLn0qxV2CraAEcq6yELFSOGcLGFJRyR6RVo01SH/5p0SKj/aPWsUFmEy1bl65XwUA==",
+      "path": "datatables.net.bootstrap/1.10.15.1",
+      "hashPath": "datatables.net.bootstrap.1.10.15.1.nupkg.sha512"
+    },
+    "datatables.net.core/1.10.15.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0SFxZo4QPfdB5FXMA/jS76l4Nq9Q7Bf0vWdGHiViUR3wRFy057c8aU6QD+4zmIihMe9WBSkLuFDrNJgUeDsGXw==",
+      "path": "datatables.net.core/1.10.15.1",
+      "hashPath": "datatables.net.core.1.10.15.1.nupkg.sha512"
+    },
+    "DataTablesParser/3.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xKeIdFFiNqsIue5uQwvROzJkik5+13+yw+O5Ls6Q01iqJbD1YPMwSjp9F000AdR2WCpFmqJ9NZf0zv023Fo8zg==",
+      "path": "datatablesparser/3.0.2",
+      "hashPath": "datatablesparser.3.0.2.nupkg.sha512"
+    },
     "dropzone/4.2.0": {
       "type": "package",
       "serviceable": true,
@@ -4306,12 +4391,19 @@
       "path": "dropzone/4.2.0",
       "hashPath": "dropzone.4.2.0.nupkg.sha512"
     },
-    "jQuery/3.1.0": {
+    "Ensure.That/8.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Q9+MHQLeJSemOaRlR9a0S8/MSBm7qY7cRPztwrOmtPXGXI7di8fm4Kjpqdphf41UC2RSXsqT5UVVoSabQNhwSg==",
-      "path": "jquery/3.1.0",
-      "hashPath": "jquery.3.1.0.nupkg.sha512"
+      "sha512": "sha512-XKIijolZusqx22PQ7v0SMya4tGA1YOGBt1N9q0tRBidlYdZjcQimW2roknt2xwWZDmN/G4yMHlc9Z7Pyi1t3/g==",
+      "path": "ensure.that/8.0.0",
+      "hashPath": "ensure.that.8.0.0.nupkg.sha512"
+    },
+    "jQuery/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tYajvLpBj04iqObTE+KDX172vu9Ifgja17CSezuBAI0nJt5CgsTcQqMX356F8S6z98VZ2k5EAesPNMvwshPhZQ==",
+      "path": "jquery/3.3.1",
+      "hashPath": "jquery.3.3.1.nupkg.sha512"
     },
     "jquery-globalize/1.1.1": {
       "type": "package",
@@ -4333,6 +4425,13 @@
       "sha512": "sha512-GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "path": "libuv/1.10.0",
       "hashPath": "libuv.1.10.0.nupkg.sha512"
+    },
+    "LoveSeat/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Ev06WBi+6OEg2ZE451pxRBXalE/8tNwHveMKINswm7mRgD7KLmSYhi0pfDWxeBLPTt2tP+x3tCzneefuaOXxXg==",
+      "path": "loveseat/1.0.1",
+      "hashPath": "loveseat.1.0.1.nupkg.sha512"
     },
     "Microsoft.ApplicationInsights/2.4.0": {
       "type": "package",
@@ -5538,12 +5637,19 @@
       "path": "microsoft.win32.registry/4.4.0",
       "hashPath": "microsoft.win32.registry.4.4.0.nupkg.sha512"
     },
-    "Newtonsoft.Json/10.0.3": {
+    "MyCouch/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
-      "path": "newtonsoft.json/10.0.3",
-      "hashPath": "newtonsoft.json.10.0.3.nupkg.sha512"
+      "sha512": "sha512-inuzg5w9JMJnmw4e9IAJNv06FO0yIigroaDNbsUpPuzRshdpKQZqFUBhoV+aaKmL4Oftytd6XqHlkuvYSaeO1w==",
+      "path": "mycouch/6.0.0",
+      "hashPath": "mycouch.6.0.0.nupkg.sha512"
+    },
+    "Newtonsoft.Json/11.0.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
+      "path": "newtonsoft.json/11.0.2",
+      "hashPath": "newtonsoft.json.11.0.2.nupkg.sha512"
     },
     "Newtonsoft.Json.Bson/1.0.1": {
       "type": "package",
@@ -5565,6 +5671,13 @@
       "sha512": "sha512-IJn0BqkvwEDpP+2qjvci7n4/a9f7DhKESLWb2/uG4xQh3rTkGTBUz69bI4IivCoKkTFAqjXxYDZw2K/npohjsw==",
       "path": "remotion.linq/2.1.1",
       "hashPath": "remotion.linq.2.1.1.nupkg.sha512"
+    },
+    "RestSharp/105.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2DRH1cpTOJwesBOwQ0cIhVHUmupbRKt+tdSatfdvndvsawsGMIEgrbq8yv6g3GM1MRVcb37bT8LACVFsqITDmg==",
+      "path": "restsharp/105.1.0",
+      "hashPath": "restsharp.105.1.0.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -5825,33 +5938,12 @@
       "path": "system.collections.specialized/4.3.0",
       "hashPath": "system.collections.specialized.4.3.0.nupkg.sha512"
     },
-    "System.ComponentModel/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
-      "path": "system.componentmodel/4.3.0",
-      "hashPath": "system.componentmodel.4.3.0.nupkg.sha512"
-    },
     "System.ComponentModel.Annotations/4.4.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-29K3DQ+IGU7LBaMjTo7SI7T7X/tsMtLvz1p56LJ556Iu0Dw3pKZw5g8yCYCWMRxrOF0Hr0FU0FwW0o42y2sb3A==",
       "path": "system.componentmodel.annotations/4.4.0",
       "hashPath": "system.componentmodel.annotations.4.4.0.nupkg.sha512"
-    },
-    "System.ComponentModel.Primitives/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
-      "path": "system.componentmodel.primitives/4.3.0",
-      "hashPath": "system.componentmodel.primitives.4.3.0.nupkg.sha512"
-    },
-    "System.ComponentModel.TypeConverter/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
-      "path": "system.componentmodel.typeconverter/4.3.0",
-      "hashPath": "system.componentmodel.typeconverter.4.3.0.nupkg.sha512"
     },
     "System.Composition/1.0.31": {
       "type": "package",
@@ -6224,13 +6316,6 @@
       "path": "system.runtime.numerics/4.3.0",
       "hashPath": "system.runtime.numerics.4.3.0.nupkg.sha512"
     },
-    "System.Runtime.Serialization.Formatters/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
-      "path": "system.runtime.serialization.formatters/4.3.0",
-      "hashPath": "system.runtime.serialization.formatters.4.3.0.nupkg.sha512"
-    },
     "System.Runtime.Serialization.Json/4.0.2": {
       "type": "package",
       "serviceable": true,
@@ -6238,12 +6323,12 @@
       "path": "system.runtime.serialization.json/4.0.2",
       "hashPath": "system.runtime.serialization.json.4.0.2.nupkg.sha512"
     },
-    "System.Runtime.Serialization.Primitives/4.3.0": {
+    "System.Runtime.Serialization.Primitives/4.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
-      "path": "system.runtime.serialization.primitives/4.3.0",
-      "hashPath": "system.runtime.serialization.primitives.4.3.0.nupkg.sha512"
+      "sha512": "sha512-HZ6Du5QrTG8MNJbf4e4qMO3JRAkIboGT5Fk804uZtg3Gq516S7hAqTm2UZKUHa7/6HUGdVy3AqMQKbns06G/cg==",
+      "path": "system.runtime.serialization.primitives/4.1.1",
+      "hashPath": "system.runtime.serialization.primitives.4.1.1.nupkg.sha512"
     },
     "System.Security.AccessControl/4.4.0": {
       "type": "package",

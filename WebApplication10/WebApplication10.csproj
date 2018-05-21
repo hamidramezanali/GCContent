@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Controllers\Flowcells.cshtml" />
     <Content Remove="Views\Home\Chart.cshtml" />
     <Content Remove="Views\Home\highCharts.cshtml" />
     <Content Remove="wwwroot\Scripts\jquery.filedrop.js" />
@@ -13,11 +14,19 @@
   <ItemGroup>
     <PackageReference Include="Chart.Mvc" Version="1.0.0.2" />
     <PackageReference Include="ChartJS" Version="18.1.1-pre-18064" />
+    <PackageReference Include="CouchN" Version="0.2.0.7" />
+    <PackageReference Include="datatables.net" Version="1.10.15" />
+    <PackageReference Include="datatables.net.bootstrap" Version="1.10.15.1" />
+    <PackageReference Include="datatables.net.core" Version="1.10.15.1" />
+    <PackageReference Include="DataTablesParser" Version="3.0.2" />
     <PackageReference Include="dropzone" Version="4.2.0" />
+    <PackageReference Include="jQuery" Version="3.3.1" />
     <PackageReference Include="jQuery.filedrop" Version="1.0.1" />
+    <PackageReference Include="LoveSeat" Version="1.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="Microsoft.Chart.Controls" Version="4.7.2046" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.2" />
+    <PackageReference Include="MyCouch" Version="6.0.0" />
     <PackageReference Include="SiCo.Utilities.Web.Charts" Version="2.2.0" />
     <PackageReference Include="System-Web-Helpers.dll" Version="1.0.0" />
   </ItemGroup>

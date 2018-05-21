@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "bootstrap/3.3.7": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "[1.9.1, 4.0.0)"
+        }
+      },
       "Chart.Mvc/1.0.0.2": {
         "type": "package",
         "compile": {
@@ -21,10 +27,78 @@
       "cldrjs/0.4.4": {
         "type": "package"
       },
+      "CouchN/0.2.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "7.0.1",
+          "RestSharp": "105.1.0"
+        },
+        "compile": {
+          "lib/net40/CouchN.dll": {}
+        },
+        "runtime": {
+          "lib/net40/CouchN.dll": {}
+        }
+      },
+      "datatables.net/1.10.15": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "1.12.4"
+        },
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/_._": {}
+        }
+      },
+      "datatables.net.bootstrap/1.10.15.1": {
+        "type": "package",
+        "dependencies": {
+          "bootstrap": "3.3.7",
+          "datatables.net.core": "1.10.15.1"
+        },
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/_._": {}
+        }
+      },
+      "datatables.net.core/1.10.15.1": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "1.12.4"
+        },
+        "compile": {
+          "lib/_._": {}
+        },
+        "runtime": {
+          "lib/_._": {}
+        }
+      },
+      "DataTablesParser/3.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net45/DataTablesParser.dll": {}
+        },
+        "runtime": {
+          "lib/net45/DataTablesParser.dll": {}
+        }
+      },
       "dropzone/4.2.0": {
         "type": "package"
       },
-      "jQuery/3.1.0": {
+      "Ensure.That/8.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Ensure.That.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Ensure.That.dll": {}
+        }
+      },
+      "jQuery/3.3.1": {
         "type": "package"
       },
       "jquery-globalize/1.1.1": {
@@ -74,6 +148,20 @@
             "assetType": "native",
             "rid": "win-x86"
           }
+        }
+      },
+      "LoveSeat/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "4.0.6"
+        },
+        "compile": {
+          "lib/net40/LoveSeat.Interfaces.dll": {},
+          "lib/net40/LoveSeat.dll": {}
+        },
+        "runtime": {
+          "lib/net40/LoveSeat.Interfaces.dll": {},
+          "lib/net40/LoveSeat.dll": {}
         }
       },
       "Microsoft.ApplicationInsights/2.4.0": {
@@ -2854,6 +2942,20 @@
           }
         }
       },
+      "MyCouch/6.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Ensure.That": "8.0.0",
+          "Newtonsoft.Json": "11.0.2",
+          "System.Reflection.Emit.Lightweight": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/MyCouch.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/MyCouch.dll": {}
+        }
+      },
       "NETStandard.Library/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -2869,21 +2971,13 @@
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
       },
-      "Newtonsoft.Json/10.0.3": {
+      "Newtonsoft.Json/11.0.2": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.CSharp": "4.3.0",
-          "NETStandard.Library": "1.6.1",
-          "System.ComponentModel.TypeConverter": "4.3.0",
-          "System.Runtime.Serialization.Formatters": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.3.0",
-          "System.Xml.XmlDocument": "4.3.0"
-        },
         "compile": {
-          "lib/netstandard1.3/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         },
         "runtime": {
-          "lib/netstandard1.3/Newtonsoft.Json.dll": {}
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
       "Newtonsoft.Json.Bson/1.0.1": {
@@ -2931,6 +3025,15 @@
         },
         "runtime": {
           "lib/netstandard1.0/Remotion.Linq.dll": {}
+        }
+      },
+      "RestSharp/105.1.0": {
+        "type": "package",
+        "compile": {
+          "lib/net452/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net452/RestSharp.dll": {}
         }
       },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -3403,18 +3506,6 @@
           "lib/netstandard1.3/System.Collections.Specialized.dll": {}
         }
       },
-      "System.ComponentModel/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.0/System.ComponentModel.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.3/System.ComponentModel.dll": {}
-        }
-      },
       "System.ComponentModel.Annotations/4.4.0": {
         "type": "package",
         "compile": {
@@ -3422,46 +3513,6 @@
         },
         "runtime": {
           "lib/netcoreapp2.0/_._": {}
-        }
-      },
-      "System.ComponentModel.Primitives/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.ComponentModel": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.0/System.ComponentModel.Primitives.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.0/System.ComponentModel.Primitives.dll": {}
-        }
-      },
-      "System.ComponentModel.TypeConverter/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Collections.NonGeneric": "4.3.0",
-          "System.Collections.Specialized": "4.3.0",
-          "System.ComponentModel": "4.3.0",
-          "System.ComponentModel.Primitives": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.Linq": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Extensions": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Threading": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
         }
       },
       "System.Composition/1.0.31": {
@@ -4384,22 +4435,6 @@
           "lib/netstandard1.3/System.Runtime.Numerics.dll": {}
         }
       },
-      "System.Runtime.Serialization.Formatters/4.3.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Serialization.Primitives": "4.3.0"
-        },
-        "compile": {
-          "ref/netstandard1.3/System.Runtime.Serialization.Formatters.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.4/System.Runtime.Serialization.Formatters.dll": {}
-        }
-      },
       "System.Runtime.Serialization.Json/4.0.2": {
         "type": "package",
         "dependencies": {
@@ -4414,11 +4449,11 @@
           "lib/netstandard1.3/System.Runtime.Serialization.Json.dll": {}
         }
       },
-      "System.Runtime.Serialization.Primitives/4.3.0": {
+      "System.Runtime.Serialization.Primitives/4.1.1": {
         "type": "package",
         "dependencies": {
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0"
+          "System.Resources.ResourceManager": "4.0.1",
+          "System.Runtime": "4.1.0"
         },
         "compile": {
           "ref/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
@@ -4989,7 +5024,7 @@
           "System.Xml.ReaderWriter": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.3/System.Xml.XmlDocument.dll": {}
+          "ref/netstandard1.3/_._": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlDocument.dll": {}
@@ -5081,6 +5116,30 @@
     }
   },
   "libraries": {
+    "bootstrap/3.3.7": {
+      "sha512": "3YTWhPNh6UcnUvzw9u6A2/hy2w0h4lznxPbX6FY47lFia3+Ib4zBixTpW6YieYA/b2fLXbkjoD59OjcVF3cJXw==",
+      "type": "package",
+      "path": "bootstrap/3.3.7",
+      "files": [
+        "bootstrap.3.3.7.nupkg.sha512",
+        "bootstrap.nuspec",
+        "content/Content/bootstrap-theme.css",
+        "content/Content/bootstrap-theme.css.map",
+        "content/Content/bootstrap-theme.min.css",
+        "content/Content/bootstrap-theme.min.css.map",
+        "content/Content/bootstrap.css",
+        "content/Content/bootstrap.css.map",
+        "content/Content/bootstrap.min.css",
+        "content/Content/bootstrap.min.css.map",
+        "content/Scripts/bootstrap.js",
+        "content/Scripts/bootstrap.min.js",
+        "content/fonts/glyphicons-halflings-regular.eot",
+        "content/fonts/glyphicons-halflings-regular.svg",
+        "content/fonts/glyphicons-halflings-regular.ttf",
+        "content/fonts/glyphicons-halflings-regular.woff",
+        "content/fonts/glyphicons-halflings-regular.woff2"
+      ]
+    },
     "Chart.Mvc/1.0.0.2": {
       "sha512": "siBzB5T2j0HW1yLrWGq51vtOVTFnvKmbXihR7i97VC0iDn7u5yoUpVjX0cjjLMCTM6ipNBrNZKX2JgL5VEVhpQ==",
       "type": "package",
@@ -5142,6 +5201,333 @@
         "content/Scripts/cldr/unresolved.js"
       ]
     },
+    "CouchN/0.2.0.7": {
+      "sha512": "6t6yFeYwLU/g9DvRJpqlP1L/+M51bvA24lx1pTKmuFmvzRxLMV7beuTIOIC5Ok0OlrHYp16EPi+odjQFvVFLJA==",
+      "type": "package",
+      "path": "couchn/0.2.0.7",
+      "files": [
+        "couchn.0.2.0.7.nupkg.sha512",
+        "couchn.nuspec",
+        "lib/net40/CouchN.dll"
+      ]
+    },
+    "datatables.net/1.10.15": {
+      "sha512": "q4EzBAJ9I10phyF24GXlRhXv2uJ91kG7nnVb80ywGsCghfus/1ynqMv12mFGjXxpoMdlOBCf4nth/EymQfCevw==",
+      "type": "package",
+      "path": "datatables.net/1.10.15",
+      "files": [
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.bootstrap.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.bootstrap.min.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.bootstrap4.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.dataTables.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.dataTables.min.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.foundation.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.foundation.min.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.jqueryui.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.jqueryui.min.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.semanticui.css",
+        "content/Content/DataTables/extensions/AutoFill/css/autoFill.semanticui.min.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.bootstrap.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.bootstrap.min.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.bootstrap4.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.dataTables.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.dataTables.min.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.foundation.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.foundation.min.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.jqueryui.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.jqueryui.min.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.semanticui.css",
+        "content/Content/DataTables/extensions/Buttons/css/buttons.semanticui.min.css",
+        "content/Content/DataTables/extensions/Buttons/css/common.scss",
+        "content/Content/DataTables/extensions/Buttons/css/mixins.scss",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.bootstrap.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.bootstrap.min.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.bootstrap4.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.dataTables.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.dataTables.min.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.foundation.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.foundation.min.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.jqueryui.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.jqueryui.min.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.semanticui.css",
+        "content/Content/DataTables/extensions/ColReorder/css/colReorder.semanticui.min.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.bootstrap.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.bootstrap.min.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.bootstrap4.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.dataTables.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.dataTables.min.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.foundation.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.foundation.min.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.jqueryui.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.jqueryui.min.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.semanticui.css",
+        "content/Content/DataTables/extensions/FixedColumns/css/fixedColumns.semanticui.min.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.bootstrap.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.bootstrap.min.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.bootstrap4.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.dataTables.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.dataTables.min.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.foundation.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.foundation.min.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.jqueryui.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.jqueryui.min.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.semanticui.css",
+        "content/Content/DataTables/extensions/FixedHeader/css/fixedHeader.semanticui.min.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.bootstrap.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.bootstrap.min.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.bootstrap4.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.dataTables.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.dataTables.min.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.foundation.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.foundation.min.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.jqueryui.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.jqueryui.min.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.semanticui.css",
+        "content/Content/DataTables/extensions/KeyTable/css/keyTable.semanticui.min.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.bootstrap.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.bootstrap.min.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.bootstrap4.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.dataTables.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.dataTables.min.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.foundation.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.foundation.min.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.jqueryui.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.jqueryui.min.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.semanticui.css",
+        "content/Content/DataTables/extensions/Responsive/css/responsive.semanticui.min.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.bootstrap.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.bootstrap.min.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.bootstrap4.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.dataTables.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.dataTables.min.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.foundation.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.foundation.min.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.jqueryui.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.jqueryui.min.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.semanticui.css",
+        "content/Content/DataTables/extensions/RowGroup/css/rowGroup.semanticui.min.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.bootstrap.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.bootstrap.min.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.bootstrap4.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.dataTables.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.dataTables.min.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.foundation.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.foundation.min.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.jqueryui.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.jqueryui.min.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.semanticui.css",
+        "content/Content/DataTables/extensions/RowReorder/css/rowReorder.semanticui.min.css",
+        "content/Content/DataTables/extensions/RowReorder/css/semanticui.scss",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.bootstrap.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.bootstrap.min.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.bootstrap4.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.dataTables.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.dataTables.min.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.foundation.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.foundation.min.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.jqueryui.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.jqueryui.min.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.semanticui.css",
+        "content/Content/DataTables/extensions/Scroller/css/scroller.semanticui.min.css",
+        "content/Content/DataTables/extensions/Select/css/select.bootstrap.css",
+        "content/Content/DataTables/extensions/Select/css/select.bootstrap.min.css",
+        "content/Content/DataTables/extensions/Select/css/select.bootstrap4.css",
+        "content/Content/DataTables/extensions/Select/css/select.bootstrap4.min.css",
+        "content/Content/DataTables/extensions/Select/css/select.dataTables.css",
+        "content/Content/DataTables/extensions/Select/css/select.dataTables.min.css",
+        "content/Content/DataTables/extensions/Select/css/select.foundation.css",
+        "content/Content/DataTables/extensions/Select/css/select.foundation.min.css",
+        "content/Content/DataTables/extensions/Select/css/select.jqueryui.css",
+        "content/Content/DataTables/extensions/Select/css/select.jqueryui.min.css",
+        "content/Content/DataTables/extensions/Select/css/select.semanticui.css",
+        "content/Content/DataTables/extensions/Select/css/select.semanticui.min.css",
+        "content/Content/DataTables/media/css/dataTables.bootstrap.css",
+        "content/Content/DataTables/media/css/dataTables.bootstrap.min.css",
+        "content/Content/DataTables/media/css/dataTables.bootstrap4.css",
+        "content/Content/DataTables/media/css/dataTables.bootstrap4.min.css",
+        "content/Content/DataTables/media/css/dataTables.foundation.css",
+        "content/Content/DataTables/media/css/dataTables.foundation.min.css",
+        "content/Content/DataTables/media/css/dataTables.jqueryui.css",
+        "content/Content/DataTables/media/css/dataTables.jqueryui.min.css",
+        "content/Content/DataTables/media/css/dataTables.material.css",
+        "content/Content/DataTables/media/css/dataTables.material.min.css",
+        "content/Content/DataTables/media/css/dataTables.semanticui.css",
+        "content/Content/DataTables/media/css/dataTables.semanticui.min.css",
+        "content/Content/DataTables/media/css/dataTables.uikit.css",
+        "content/Content/DataTables/media/css/dataTables.uikit.min.css",
+        "content/Content/DataTables/media/css/jquery.dataTables.css",
+        "content/Content/DataTables/media/css/jquery.dataTables.min.css",
+        "content/Content/DataTables/media/css/jquery.dataTables_themeroller.css",
+        "content/Content/DataTables/media/images/Sorting icons.psd",
+        "content/Content/DataTables/media/images/favicon.ico",
+        "content/Content/DataTables/media/images/sort_asc.png",
+        "content/Content/DataTables/media/images/sort_asc_disabled.png",
+        "content/Content/DataTables/media/images/sort_both.png",
+        "content/Content/DataTables/media/images/sort_desc.png",
+        "content/Content/DataTables/media/images/sort_desc_disabled.png",
+        "content/Scripts/DataTables/extensions/AutoFill/Readme.md",
+        "content/Scripts/DataTables/extensions/AutoFill/js/autoFill.bootstrap.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/autoFill.bootstrap.min.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/autoFill.bootstrap4.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/autoFill.bootstrap4.min.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/autoFill.foundation.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/autoFill.foundation.min.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/autoFill.jqueryui.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/autoFill.jqueryui.min.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/autoFill.semanticui.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/autoFill.semanticui.min.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/dataTables.autoFill.js",
+        "content/Scripts/DataTables/extensions/AutoFill/js/dataTables.autoFill.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/Readme.md",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.bootstrap.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.bootstrap.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.bootstrap4.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.bootstrap4.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.colVis.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.colVis.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.flash.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.flash.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.foundation.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.foundation.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.html5.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.html5.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.jqueryui.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.jqueryui.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.print.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.print.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.semanticui.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/buttons.semanticui.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/dataTables.buttons.js",
+        "content/Scripts/DataTables/extensions/Buttons/js/dataTables.buttons.min.js",
+        "content/Scripts/DataTables/extensions/Buttons/swf/flashExport.swf",
+        "content/Scripts/DataTables/extensions/ColReorder/Readme.md",
+        "content/Scripts/DataTables/extensions/ColReorder/js/dataTables.colReorder.js",
+        "content/Scripts/DataTables/extensions/ColReorder/js/dataTables.colReorder.min.js",
+        "content/Scripts/DataTables/extensions/FixedColumns/Readme.md",
+        "content/Scripts/DataTables/extensions/FixedColumns/js/dataTables.fixedColumns.js",
+        "content/Scripts/DataTables/extensions/FixedColumns/js/dataTables.fixedColumns.min.js",
+        "content/Scripts/DataTables/extensions/FixedHeader/Readme.md",
+        "content/Scripts/DataTables/extensions/FixedHeader/js/dataTables.fixedHeader.js",
+        "content/Scripts/DataTables/extensions/FixedHeader/js/dataTables.fixedHeader.min.js",
+        "content/Scripts/DataTables/extensions/KeyTable/Readme.md",
+        "content/Scripts/DataTables/extensions/KeyTable/js/dataTables.keyTable.js",
+        "content/Scripts/DataTables/extensions/KeyTable/js/dataTables.keyTable.min.js",
+        "content/Scripts/DataTables/extensions/Responsive/Readme.md",
+        "content/Scripts/DataTables/extensions/Responsive/js/dataTables.responsive.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/dataTables.responsive.min.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/responsive.bootstrap.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/responsive.bootstrap.min.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/responsive.bootstrap4.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/responsive.bootstrap4.min.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/responsive.foundation.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/responsive.foundation.min.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/responsive.jqueryui.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/responsive.jqueryui.min.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/responsive.semanticui.js",
+        "content/Scripts/DataTables/extensions/Responsive/js/responsive.semanticui.min.js",
+        "content/Scripts/DataTables/extensions/RowGroup/Readme.md",
+        "content/Scripts/DataTables/extensions/RowGroup/js/dataTables.rowGroup.js",
+        "content/Scripts/DataTables/extensions/RowGroup/js/dataTables.rowGroup.min.js",
+        "content/Scripts/DataTables/extensions/RowReorder/Readme.md",
+        "content/Scripts/DataTables/extensions/RowReorder/js/dataTables.rowReorder.js",
+        "content/Scripts/DataTables/extensions/RowReorder/js/dataTables.rowReorder.min.js",
+        "content/Scripts/DataTables/extensions/Scroller/Readme.md",
+        "content/Scripts/DataTables/extensions/Scroller/js/dataTables.scroller.js",
+        "content/Scripts/DataTables/extensions/Scroller/js/dataTables.scroller.min.js",
+        "content/Scripts/DataTables/extensions/Select/Readme.md",
+        "content/Scripts/DataTables/extensions/Select/js/dataTables.select.js",
+        "content/Scripts/DataTables/extensions/Select/js/dataTables.select.min.js",
+        "content/Scripts/DataTables/media/js/dataTables.bootstrap.js",
+        "content/Scripts/DataTables/media/js/dataTables.bootstrap.min.js",
+        "content/Scripts/DataTables/media/js/dataTables.bootstrap4.js",
+        "content/Scripts/DataTables/media/js/dataTables.bootstrap4.min.js",
+        "content/Scripts/DataTables/media/js/dataTables.foundation.js",
+        "content/Scripts/DataTables/media/js/dataTables.foundation.min.js",
+        "content/Scripts/DataTables/media/js/dataTables.jqueryui.js",
+        "content/Scripts/DataTables/media/js/dataTables.jqueryui.min.js",
+        "content/Scripts/DataTables/media/js/dataTables.material.js",
+        "content/Scripts/DataTables/media/js/dataTables.material.min.js",
+        "content/Scripts/DataTables/media/js/dataTables.semanticui.js",
+        "content/Scripts/DataTables/media/js/dataTables.semanticui.min.js",
+        "content/Scripts/DataTables/media/js/dataTables.uikit.js",
+        "content/Scripts/DataTables/media/js/dataTables.uikit.min.js",
+        "content/Scripts/DataTables/media/js/jquery.dataTables.js",
+        "content/Scripts/DataTables/media/js/jquery.dataTables.min.js",
+        "content/Scripts/DataTables/media/js/jquery.js",
+        "datatables.net.1.10.15.nupkg.sha512",
+        "datatables.net.nuspec",
+        "lib/_._",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "datatables.net.bootstrap/1.10.15.1": {
+      "sha512": "w1SVJyUzfThHVwdOk3+bhZLn0qxV2CraAEcq6yELFSOGcLGFJRyR6RVo01SH/5p0SKj/aPWsUFmEy1bl65XwUA==",
+      "type": "package",
+      "path": "datatables.net.bootstrap/1.10.15.1",
+      "files": [
+        "content/Content/Datatables/dataTables.bootstrap.css",
+        "content/Content/Datatables/dataTables.bootstrap.min.css",
+        "content/Content/Datatables/dataTables.bootstrap4.css",
+        "content/Content/Datatables/dataTables.bootstrap4.min.css",
+        "content/Scripts/dataTables.bootstrap.js",
+        "content/Scripts/dataTables.bootstrap.min.js",
+        "content/Scripts/dataTables.bootstrap4.js",
+        "content/Scripts/dataTables.bootstrap4.min.js",
+        "datatables.net.bootstrap.1.10.15.1.nupkg.sha512",
+        "datatables.net.bootstrap.nuspec",
+        "lib/_._",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "datatables.net.core/1.10.15.1": {
+      "sha512": "0SFxZo4QPfdB5FXMA/jS76l4Nq9Q7Bf0vWdGHiViUR3wRFy057c8aU6QD+4zmIihMe9WBSkLuFDrNJgUeDsGXw==",
+      "type": "package",
+      "path": "datatables.net.core/1.10.15.1",
+      "files": [
+        "content/Content/Datatables/jquery.dataTables.css",
+        "content/Content/Datatables/jquery.dataTables.min.css",
+        "content/Content/Datatables/jquery.dataTables_themeroller.css",
+        "content/Content/images/Sorting icons.psd",
+        "content/Content/images/favicon.ico",
+        "content/Content/images/sort_asc.png",
+        "content/Content/images/sort_asc_disabled.png",
+        "content/Content/images/sort_both.png",
+        "content/Content/images/sort_desc.png",
+        "content/Content/images/sort_desc_disabled.png",
+        "content/Scripts/jquery.dataTables.js",
+        "content/Scripts/jquery.dataTables.min.js",
+        "datatables.net.core.1.10.15.1.nupkg.sha512",
+        "datatables.net.core.nuspec",
+        "lib/_._",
+        "tools/init.ps1",
+        "tools/install.ps1",
+        "tools/uninstall.ps1"
+      ]
+    },
+    "DataTablesParser/3.0.2": {
+      "sha512": "xKeIdFFiNqsIue5uQwvROzJkik5+13+yw+O5Ls6Q01iqJbD1YPMwSjp9F000AdR2WCpFmqJ9NZf0zv023Fo8zg==",
+      "type": "package",
+      "path": "datatablesparser/3.0.2",
+      "files": [
+        "datatablesparser.3.0.2.nupkg.sha512",
+        "datatablesparser.nuspec",
+        "lib/net45/DataTablesParser.dll"
+      ]
+    },
     "dropzone/4.2.0": {
       "sha512": "DPgbwxoCOH4QIpZYZ0CNU0sAjP15LnkYhANItOoEjPJdeSzN2omYVqvjM6sM7F1EH+Ul4w6Fz8V8rgsdhAmKFg==",
       "type": "package",
@@ -5159,23 +5545,38 @@
         "dropzone.nuspec"
       ]
     },
-    "jQuery/3.1.0": {
-      "sha512": "Q9+MHQLeJSemOaRlR9a0S8/MSBm7qY7cRPztwrOmtPXGXI7di8fm4Kjpqdphf41UC2RSXsqT5UVVoSabQNhwSg==",
+    "Ensure.That/8.0.0": {
+      "sha512": "XKIijolZusqx22PQ7v0SMya4tGA1YOGBt1N9q0tRBidlYdZjcQimW2roknt2xwWZDmN/G4yMHlc9Z7Pyi1t3/g==",
       "type": "package",
-      "path": "jquery/3.1.0",
+      "path": "ensure.that/8.0.0",
       "files": [
-        "Content/Scripts/jquery-3.1.0-vsdoc.js",
-        "Content/Scripts/jquery-3.1.0.js",
-        "Content/Scripts/jquery-3.1.0.min.js",
-        "Content/Scripts/jquery-3.1.0.min.map",
-        "Content/Scripts/jquery-3.1.0.slim.js",
-        "Content/Scripts/jquery-3.1.0.slim.min.js",
-        "Content/Scripts/jquery-3.1.0.slim.min.map",
+        "ensure.that.8.0.0.nupkg.sha512",
+        "ensure.that.nuspec",
+        "lib/net451/Ensure.That.dll",
+        "lib/net451/Ensure.That.xml",
+        "lib/netstandard1.1/Ensure.That.dll",
+        "lib/netstandard1.1/Ensure.That.xml",
+        "lib/netstandard2.0/Ensure.That.dll",
+        "lib/netstandard2.0/Ensure.That.xml"
+      ]
+    },
+    "jQuery/3.3.1": {
+      "sha512": "tYajvLpBj04iqObTE+KDX172vu9Ifgja17CSezuBAI0nJt5CgsTcQqMX356F8S6z98VZ2k5EAesPNMvwshPhZQ==",
+      "type": "package",
+      "path": "jquery/3.3.1",
+      "files": [
+        "Content/Scripts/jquery-3.3.1-vsdoc.js",
+        "Content/Scripts/jquery-3.3.1.js",
+        "Content/Scripts/jquery-3.3.1.min.js",
+        "Content/Scripts/jquery-3.3.1.min.map",
+        "Content/Scripts/jquery-3.3.1.slim.js",
+        "Content/Scripts/jquery-3.3.1.slim.min.js",
+        "Content/Scripts/jquery-3.3.1.slim.min.map",
         "Tools/common.ps1",
         "Tools/install.ps1",
-        "Tools/jquery-3.1.0.intellisense.js",
+        "Tools/jquery-3.3.1.intellisense.js",
         "Tools/uninstall.ps1",
-        "jquery.3.1.0.nupkg.sha512",
+        "jquery.3.3.1.nupkg.sha512",
         "jquery.nuspec"
       ]
     },
@@ -5222,6 +5623,18 @@
         "runtimes/win-arm/native/libuv.dll",
         "runtimes/win-x64/native/libuv.dll",
         "runtimes/win-x86/native/libuv.dll"
+      ]
+    },
+    "LoveSeat/1.0.1": {
+      "sha512": "Ev06WBi+6OEg2ZE451pxRBXalE/8tNwHveMKINswm7mRgD7KLmSYhi0pfDWxeBLPTt2tP+x3tCzneefuaOXxXg==",
+      "type": "package",
+      "path": "loveseat/1.0.1",
+      "files": [
+        "lib/net40/LoveSeat.Interfaces.dll",
+        "lib/net40/LoveSeat.XML",
+        "lib/net40/LoveSeat.dll",
+        "loveseat.1.0.1.nupkg.sha512",
+        "loveseat.nuspec"
       ]
     },
     "Microsoft.ApplicationInsights/2.4.0": {
@@ -8023,6 +8436,21 @@
         "version.txt"
       ]
     },
+    "MyCouch/6.0.0": {
+      "sha512": "inuzg5w9JMJnmw4e9IAJNv06FO0yIigroaDNbsUpPuzRshdpKQZqFUBhoV+aaKmL4Oftytd6XqHlkuvYSaeO1w==",
+      "type": "package",
+      "path": "mycouch/6.0.0",
+      "files": [
+        "lib/net451/MyCouch.dll",
+        "lib/net451/MyCouch.xml",
+        "lib/netstandard1.1/MyCouch.dll",
+        "lib/netstandard1.1/MyCouch.xml",
+        "lib/netstandard2.0/MyCouch.dll",
+        "lib/netstandard2.0/MyCouch.xml",
+        "mycouch.6.0.0.nupkg.sha512",
+        "mycouch.nuspec"
+      ]
+    },
     "NETStandard.Library/2.0.0": {
       "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
       "type": "package",
@@ -8151,10 +8579,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/10.0.3": {
-      "sha512": "hSXaFmh7hNCuEoC4XNY5DrRkLDzYHqPx/Ik23R4J86Z7PE/Y6YidhG602dFVdLBRSdG6xp9NabH3dXpcoxWvww==",
+    "Newtonsoft.Json/11.0.2": {
+      "sha512": "IvJe1pj7JHEsP8B8J8DwlMEx8UInrs/x+9oVY+oCD13jpLu4JbJU2WCIsMRn5C4yW9+DgkaO8uiVE5VHKjpmdQ==",
       "type": "package",
-      "path": "newtonsoft.json/10.0.3",
+      "path": "newtonsoft.json/11.0.2",
       "files": [
         "LICENSE.md",
         "lib/net20/Newtonsoft.Json.dll",
@@ -8169,13 +8597,14 @@
         "lib/netstandard1.0/Newtonsoft.Json.xml",
         "lib/netstandard1.3/Newtonsoft.Json.dll",
         "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.10.0.3.nupkg.sha512",
-        "newtonsoft.json.nuspec",
-        "tools/install.ps1"
+        "newtonsoft.json.11.0.2.nupkg.sha512",
+        "newtonsoft.json.nuspec"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.1": {
@@ -8223,6 +8652,40 @@
         "lib/portable-net45+win+wpa81+wp80/Remotion.Linq.xml",
         "remotion.linq.2.1.1.nupkg.sha512",
         "remotion.linq.nuspec"
+      ]
+    },
+    "RestSharp/105.1.0": {
+      "sha512": "2DRH1cpTOJwesBOwQ0cIhVHUmupbRKt+tdSatfdvndvsawsGMIEgrbq8yv6g3GM1MRVcb37bT8LACVFsqITDmg==",
+      "type": "package",
+      "path": "restsharp/105.1.0",
+      "files": [
+        "lib/net35-client/RestSharp.dll",
+        "lib/net35-client/RestSharp.xml",
+        "lib/net35/RestSharp.dll",
+        "lib/net35/RestSharp.xml",
+        "lib/net4-client/RestSharp.dll",
+        "lib/net4-client/RestSharp.xml",
+        "lib/net4/RestSharp.dll",
+        "lib/net4/RestSharp.xml",
+        "lib/net45-client/RestSharp.dll",
+        "lib/net45-client/RestSharp.xml",
+        "lib/net45/RestSharp.dll",
+        "lib/net45/RestSharp.xml",
+        "lib/net451-client/RestSharp.dll",
+        "lib/net451-client/RestSharp.xml",
+        "lib/net451/RestSharp.dll",
+        "lib/net451/RestSharp.xml",
+        "lib/net452-client/RestSharp.dll",
+        "lib/net452-client/RestSharp.xml",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/sl4/RestSharp.Silverlight.dll",
+        "lib/sl4/RestSharp.Silverlight.xml",
+        "lib/windowsphone8/RestSharp.WindowsPhone.dll",
+        "lib/windowsphone8/RestSharp.WindowsPhone.xml",
+        "readme.txt",
+        "restsharp.105.1.0.nupkg.sha512",
+        "restsharp.nuspec"
       ]
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
@@ -8946,63 +9409,6 @@
         "system.collections.specialized.nuspec"
       ]
     },
-    "System.ComponentModel/4.3.0": {
-      "sha512": "VyGn1jGRZVfxnh8EdvDCi71v3bMXrsu8aYJOwoV7SNDLVhiEqwP86pPMyRGsDsxhXAm2b3o9OIqeETfN5qfezw==",
-      "type": "package",
-      "path": "system.componentmodel/4.3.0",
-      "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/_._",
-        "lib/netcore50/System.ComponentModel.dll",
-        "lib/netstandard1.3/System.ComponentModel.dll",
-        "lib/portable-net45+win8+wp8+wpa81/_._",
-        "lib/win8/_._",
-        "lib/wp80/_._",
-        "lib/wpa81/_._",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/_._",
-        "ref/netcore50/System.ComponentModel.dll",
-        "ref/netcore50/System.ComponentModel.xml",
-        "ref/netcore50/de/System.ComponentModel.xml",
-        "ref/netcore50/es/System.ComponentModel.xml",
-        "ref/netcore50/fr/System.ComponentModel.xml",
-        "ref/netcore50/it/System.ComponentModel.xml",
-        "ref/netcore50/ja/System.ComponentModel.xml",
-        "ref/netcore50/ko/System.ComponentModel.xml",
-        "ref/netcore50/ru/System.ComponentModel.xml",
-        "ref/netcore50/zh-hans/System.ComponentModel.xml",
-        "ref/netcore50/zh-hant/System.ComponentModel.xml",
-        "ref/netstandard1.0/System.ComponentModel.dll",
-        "ref/netstandard1.0/System.ComponentModel.xml",
-        "ref/netstandard1.0/de/System.ComponentModel.xml",
-        "ref/netstandard1.0/es/System.ComponentModel.xml",
-        "ref/netstandard1.0/fr/System.ComponentModel.xml",
-        "ref/netstandard1.0/it/System.ComponentModel.xml",
-        "ref/netstandard1.0/ja/System.ComponentModel.xml",
-        "ref/netstandard1.0/ko/System.ComponentModel.xml",
-        "ref/netstandard1.0/ru/System.ComponentModel.xml",
-        "ref/netstandard1.0/zh-hans/System.ComponentModel.xml",
-        "ref/netstandard1.0/zh-hant/System.ComponentModel.xml",
-        "ref/portable-net45+win8+wp8+wpa81/_._",
-        "ref/win8/_._",
-        "ref/wp80/_._",
-        "ref/wpa81/_._",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.componentmodel.4.3.0.nupkg.sha512",
-        "system.componentmodel.nuspec"
-      ]
-    },
     "System.ComponentModel.Annotations/4.4.0": {
       "sha512": "29K3DQ+IGU7LBaMjTo7SI7T7X/tsMtLvz1p56LJ556Iu0Dw3pKZw5g8yCYCWMRxrOF0Hr0FU0FwW0o42y2sb3A==",
       "type": "package",
@@ -9086,94 +9492,6 @@
         "system.componentmodel.annotations.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "System.ComponentModel.Primitives/4.3.0": {
-      "sha512": "j8GUkCpM8V4d4vhLIIoBLGey2Z5bCkMVNjEZseyAlm4n5arcsJOeI3zkUP+zvZgzsbLTYh4lYeP/ZD/gdIAPrw==",
-      "type": "package",
-      "path": "system.componentmodel.primitives/4.3.0",
-      "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/System.ComponentModel.Primitives.dll",
-        "lib/netstandard1.0/System.ComponentModel.Primitives.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/System.ComponentModel.Primitives.dll",
-        "ref/netstandard1.0/System.ComponentModel.Primitives.dll",
-        "ref/netstandard1.0/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/de/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/es/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/fr/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/it/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/ja/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/ko/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/ru/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/zh-hans/System.ComponentModel.Primitives.xml",
-        "ref/netstandard1.0/zh-hant/System.ComponentModel.Primitives.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.componentmodel.primitives.4.3.0.nupkg.sha512",
-        "system.componentmodel.primitives.nuspec"
-      ]
-    },
-    "System.ComponentModel.TypeConverter/4.3.0": {
-      "sha512": "16pQ6P+EdhcXzPiEK4kbA953Fu0MNG2ovxTZU81/qsCd1zPRsKc3uif5NgvllCY598k6bI0KUyKW8fanlfaDQg==",
-      "type": "package",
-      "path": "system.componentmodel.typeconverter/4.3.0",
-      "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net45/System.ComponentModel.TypeConverter.dll",
-        "lib/net462/System.ComponentModel.TypeConverter.dll",
-        "lib/netstandard1.0/System.ComponentModel.TypeConverter.dll",
-        "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net45/System.ComponentModel.TypeConverter.dll",
-        "ref/net462/System.ComponentModel.TypeConverter.dll",
-        "ref/netstandard1.0/System.ComponentModel.TypeConverter.dll",
-        "ref/netstandard1.0/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/de/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/es/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/fr/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/it/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/ja/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/ko/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/ru/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/zh-hans/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.0/zh-hant/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/System.ComponentModel.TypeConverter.dll",
-        "ref/netstandard1.5/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/de/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/es/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/fr/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/it/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/ja/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/ko/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/ru/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/zh-hans/System.ComponentModel.TypeConverter.xml",
-        "ref/netstandard1.5/zh-hant/System.ComponentModel.TypeConverter.xml",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
-        "system.componentmodel.typeconverter.nuspec"
       ]
     },
     "System.Composition/1.0.31": {
@@ -11699,33 +12017,6 @@
         "system.runtime.numerics.nuspec"
       ]
     },
-    "System.Runtime.Serialization.Formatters/4.3.0": {
-      "sha512": "KT591AkTNFOTbhZlaeMVvfax3RqhH1EJlcwF50Wm7sfnBLuHiOeZRRKrr1ns3NESkM20KPZ5Ol/ueMq5vg4QoQ==",
-      "type": "package",
-      "path": "system.runtime.serialization.formatters/4.3.0",
-      "files": [
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
-        "lib/MonoAndroid10/_._",
-        "lib/MonoTouch10/_._",
-        "lib/net46/System.Runtime.Serialization.Formatters.dll",
-        "lib/netstandard1.4/System.Runtime.Serialization.Formatters.dll",
-        "lib/xamarinios10/_._",
-        "lib/xamarinmac20/_._",
-        "lib/xamarintvos10/_._",
-        "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net46/System.Runtime.Serialization.Formatters.dll",
-        "ref/netstandard1.3/System.Runtime.Serialization.Formatters.dll",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "system.runtime.serialization.formatters.4.3.0.nupkg.sha512",
-        "system.runtime.serialization.formatters.nuspec"
-      ]
-    },
     "System.Runtime.Serialization.Json/4.0.2": {
       "sha512": "+7DIJhnKYgCzUgcLbVTtRQb2l1M0FP549XFlFkQM5lmNiUBl44AfNbx4bz61xA8PzLtlYwfmif4JJJW7MPPnjg==",
       "type": "package",
@@ -11783,10 +12074,10 @@
         "system.runtime.serialization.json.nuspec"
       ]
     },
-    "System.Runtime.Serialization.Primitives/4.3.0": {
-      "sha512": "Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+    "System.Runtime.Serialization.Primitives/4.1.1": {
+      "sha512": "HZ6Du5QrTG8MNJbf4e4qMO3JRAkIboGT5Fk804uZtg3Gq516S7hAqTm2UZKUHa7/6HUGdVy3AqMQKbns06G/cg==",
       "type": "package",
-      "path": "system.runtime.serialization.primitives/4.3.0",
+      "path": "system.runtime.serialization.primitives/4.1.1",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -11850,7 +12141,7 @@
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
         "runtimes/aot/lib/netcore50/System.Runtime.Serialization.Primitives.dll",
-        "system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
+        "system.runtime.serialization.primitives.4.1.1.nupkg.sha512",
         "system.runtime.serialization.primitives.nuspec"
       ]
     },
@@ -13341,13 +13632,21 @@
     ".NETCoreApp,Version=v2.0": [
       "Chart.Mvc >= 1.0.0.2",
       "ChartJS >= 18.1.1-pre-18064",
+      "CouchN >= 0.2.0.7",
+      "DataTablesParser >= 3.0.2",
+      "LoveSeat >= 1.0.1",
       "Microsoft.AspNetCore.All >= 2.0.5",
       "Microsoft.Chart.Controls >= 4.7.2046",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.2",
+      "MyCouch >= 6.0.0",
       "SiCo.Utilities.Web.Charts >= 2.2.0",
       "System-Web-Helpers.dll >= 1.0.0",
+      "datatables.net >= 1.10.15",
+      "datatables.net.bootstrap >= 1.10.15.1",
+      "datatables.net.core >= 1.10.15.1",
       "dropzone >= 4.2.0",
+      "jQuery >= 3.3.1",
       "jQuery.filedrop >= 1.0.1"
     ]
   },
@@ -13400,6 +13699,18 @@
             "target": "Package",
             "version": "[18.1.1-pre-18064, )"
           },
+          "CouchN": {
+            "target": "Package",
+            "version": "[0.2.0.7, )"
+          },
+          "DataTablesParser": {
+            "target": "Package",
+            "version": "[3.0.2, )"
+          },
+          "LoveSeat": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "Microsoft.AspNetCore.All": {
             "target": "Package",
             "version": "[2.0.5, )"
@@ -13417,6 +13728,10 @@
             "target": "Package",
             "version": "[2.0.2, )"
           },
+          "MyCouch": {
+            "target": "Package",
+            "version": "[6.0.0, )"
+          },
           "SiCo.Utilities.Web.Charts": {
             "target": "Package",
             "version": "[2.2.0, )"
@@ -13425,9 +13740,25 @@
             "target": "Package",
             "version": "[1.0.0, )"
           },
+          "datatables.net": {
+            "target": "Package",
+            "version": "[1.10.15, )"
+          },
+          "datatables.net.bootstrap": {
+            "target": "Package",
+            "version": "[1.10.15.1, )"
+          },
+          "datatables.net.core": {
+            "target": "Package",
+            "version": "[1.10.15.1, )"
+          },
           "dropzone": {
             "target": "Package",
             "version": "[4.2.0, )"
+          },
+          "jQuery": {
+            "target": "Package",
+            "version": "[3.3.1, )"
           },
           "jQuery.filedrop": {
             "target": "Package",
@@ -13457,8 +13788,78 @@
       "code": "NU1701",
       "level": "Warning",
       "warningLevel": 1,
+      "message": "Package 'CouchN 0.2.0.7' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "CouchN",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'datatables.net 1.10.15' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "datatables.net",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'datatables.net.bootstrap 1.10.15.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "datatables.net.bootstrap",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'datatables.net.core 1.10.15.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "datatables.net.core",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'DataTablesParser 3.0.2' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "DataTablesParser",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'LoveSeat 1.0.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "LoveSeat",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
       "message": "Package 'Microsoft.Chart.Controls 4.7.2046' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
       "libraryId": "Microsoft.Chart.Controls",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'RestSharp 105.1.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "RestSharp",
       "targetGraphs": [
         ".NETCoreApp,Version=v2.0"
       ]

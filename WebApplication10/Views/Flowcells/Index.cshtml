@@ -1,0 +1,84 @@
+﻿@model WebApplication10.Models.Home.NGS.Flowcell
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Banner -->
+<div class="jumbotron banner">
+    <div class="container">
+        <hgroup>
+            <h1>
+                Flowcells
+
+            </h1>
+
+
+        </hgroup>
+    </div>
+    <table id="example" class="display table-condensed table-bordered" style="width:100% ">
+        <thead>
+            <tr>
+                <th>Run ID</th>
+                <th>Start Date</th>
+                <th>System</th>
+                <th>Mode</th>
+                <th>Chemistry</th>
+                <th>Recipe</th>
+                <th>Software version</th>
+                <th>Yield Gb</th>
+                <th>Flowcell</th>
+                <th>Pos</th>
+                <th>Instrument</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.json_stats.runid</td>
+                <td>@Model.runinfo.date</td>
+                <td>Miseq</td>
+                <td>-</td>
+                <td>-</td>
+                <td>@Model.run_setup</td>
+                <td>@Model.runparameters.mcsversion</td>
+                <td>@Model.json_stats.conversionresults[0].yield</td>
+                <td>@Model.json_stats.flowcell</td>
+                <td>0</td>
+                <td>@Model.runinfo.instrument</td>
+            </tr>
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>Run ID</th>
+                <th>Start Date</th>
+                <th>System</th>
+                <th>Mode</th>
+                <th>Chemistry</th>
+                <th>Recipe</th>
+                <th>Software version</th>
+                <th>Yield Gb</th>
+                <th>Flowcell</th>
+                <th>Pos</th>
+                <th>Instrument</th>
+            </tr>
+        </tfoot>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+            $('#example').DataTable();
+        });
+    </script>
+
+</div>
+<link rel="stylesheet" type="text/css" href="/DataTables/datatables.css">
+
+<script type="text/javascript" charset="utf8" src="/DataTables/datatables.js"></script>
+
+
+
+
+
+
+
+
